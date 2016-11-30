@@ -87,10 +87,18 @@ test_basic_SOURCES = src/test-basic.c
 test_basic_LDADD = libfirmware.a
 
 # ------------------------------------------------------------------------------
+# test-runner
+
+test_runner_SOURCES = tools/test-runner.c
+
+dummy_tester_SOURCES = tools/dummy-tester.c
+
+# ------------------------------------------------------------------------------
 # targets
 
 noinst_LIBRARIES = libfirmware.a
 bin_PROGRAMS = firmwared
+noinst_PROGRAMS = test-runner dummy_tester
 default_tests = \
 	test-basic
 
